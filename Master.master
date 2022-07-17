@@ -1,0 +1,290 @@
+﻿<%@ Master Language="VB" CodeFile="Master.master.vb" Inherits="Master" %>
+
+<%@ Register Src="usercontrol/slide.ascx" TagName="slide" TagPrefix="uc1" %>
+<%@ Register Src="usercontrol/footer.ascx" TagName="footer" TagPrefix="uc2" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="content/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="content/menu/menu.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        @font-face
+        {
+            font-family: 'koodakAnd';
+            src: url(      'content/font/W_koodak.eot' );
+            src: url(      'content/font/W_koodak.eot?#iefix' ) format(      'embedded-opentype' ), url('content/font/W_koodak.woff' ) format(      'woff' ), url('content/font/W_koodak.TTF' ) format(      'truetype' );
+        }
+    </style>
+    <meta name="Keywords" content="
+     نرم افزار های اندروید ، برنامه های اندروید ، نرم افزار های آندروید ، برنامه های آندروید ، سایت اندروید ، سایت آندروید
+      شهر اندروید ، شهروید ، دانلود آندروید ، بازی و برنامه ، Android , game , Game , GAME , program , Program , PROGRAM , download , free download , برنامه نویسی آندروید ، 
+مقالات اندروید ، نوشته های اندروید ، دانلود ، رایگان ، دانلود رایگان ، ANDROID , آندروید ، اندروید" />
+    <meta name="Description" content="دانلود برنامه های اندرویدی ، Download Apps  ، دانلود رایگان ، بازی ، برنامه ، گوگل پلی ، بازیهای اندرویدی ، مقالات اندرویدی ، شهر اندروید ، شهروید ، دهکده مجازی کاسپین" />
+    <meta name="copyright" content="2013 , 2014" />
+    <meta content="Rasht" name="city" />
+    <meta content="Iran" name="country" />
+    <title>شهر اندروید ، شهروید ، دانلود آندروید ، بازی و برنامه</title>
+    <link rel="SHORTCUT ICON" href="content/images/androidIco.png">
+
+    <!-- Stat7.com -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+
+        (function () {
+            var u = (("https:" == document.location.protocol) ? "https" : "http") + "://www.stat7.com/analytics/";
+            _paq.push(["setTrackerUrl", u + "piwik.php"]);
+            _paq.push(["setSiteId", "4422"]);
+            var d = document, g = d.createElement("script"), s = d.getElementsByTagName("script")[0]; g.type = "text/javascript";
+            g.defer = true; g.async = true; g.src = u + "piwik.js"; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Stat7.com Code -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="logo">
+        <table>
+            <tr>
+                <td>
+                    <a href="http://shaahroid.ir/" style="color: White; text-decoration: none;">
+                        <div style="background-image: url('content/images/picScprit.png'); background-position: 0px 0px;
+                            width: 124px; height: 32px;">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a href="http://android.shaahr.com/shaahroid/version/" style="color: White; text-decoration: none;">
+                        <div style="background-image: url('content/images/picScprit.png'); background-position: 47px -32px;
+                            width: 47px; height: 32px;">
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtSearch" Text="جستجو برنامه و بازی ها..." onfocus="if(this.value=='جستجو برنامه و بازی ها...'){this.value='';}"
+                        ForeColor="#999999" onblur="if(this.value==''){this.value='جستجو برنامه و بازی ها...';}if(this.value=='جستجو برنامه و بازی ها...')this.style.color='#999999';"
+                        onmousedown="this.style.color='#000000';" CssClass="txtSearch" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:LinkButton ID="btnSearch" runat="server">
+                      <div style="background-image: url('content/images/picScprit.png'); background-position: 40px -64px;
+            width: 38px; height: 38px;">
+        </div>
+                    </asp:LinkButton>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="menu">
+        <div id="subMenu">
+            <table>
+                <tr>
+                    <td>
+                        <img src="content/images/logo.png"  width="67px" height="60px"/>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="http://shaahroid.ir" style="color: White; text-decoration: none;">صفحه نخست</a>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="shaahroid/about/" style="color: White; text-decoration: none;">شهروید؟</a>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="req.aspx?req=b" style="color: White; text-decoration: none;">فروش برنامه
+                        </a>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="req.aspx?req=r" style="color: White; text-decoration: none;">درخواست برنامه</a>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="shaahroid/contact/" style="color: White; text-decoration: none;">تماس با ما</a>
+                    </td>
+                    <td style="font-family: koodakAnd; font-size: 15px; color: White; text-shadow: 2px 1px 1px #227D90;
+                        padding-right: 13px;">
+                        <a href="shaahroid/ads/" style="color: White; text-decoration: none;">تبلیغات</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="slide">
+        <uc1:slide ID="slide1" runat="server" />
+    </div>
+    <div id="category">
+        <div id="subCategort">
+            <ul id="nav">
+                <li>
+                    <div>
+                        <a style="font-family: koodakAnd; color: #643103; font-size: 14px; cursor: pointer;">
+                            بازی ها . . .</a>
+                    </div>
+                    <ul>
+                        <li><a>ماجرایی</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=30" class="parent"><span>ترستانک</span></a></li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=32" class="parent"><span>هیجان
+                                    انگیز</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=41" class="parent"><span>ماجرایی</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a>مسابقه ای</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=31" class="parent"><span>رکوردزنی</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=34" class="parent"><span>نشانه
+                                    گیری</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=36" class="parent"><span>تیر
+                                    اندازی</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=39" class="parent"><span>کارتی</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=42" class="parent"><span>مسابقه
+                                    ای</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=43" class="parent"><span>ورزشی</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a>رزمی و اکشن</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=35" class="parent"><span>اکشن</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=37" class="parent"><span>رزمی</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a>متفرقه</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=28" class="parent"><span>بازی
+                                    سه بعدی</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=29" class="parent"><span>بازی
+                                    HD</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=33" class="parent"><span>شتاب
+                                    سنج</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=38" class="parent"><span>فکری
+                                    و پازل</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=40" class="parent"><span>کلاسیک</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=44" class="parent"><span>شبیه
+                                    ساز</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=45" class="parent"><span>متفرقه</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>
+                        <a style="font-family: koodakAnd; color: #643103; font-size: 14px; cursor: pointer;">
+                            برنامه ها . . .</a>
+                    </div>
+                    <ul>
+                        <li><a>اینترنتی و ارتباطی</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=1" class="parent"><span>ارتباطی</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=3" class="parent"><span>همراه
+                                    بانک</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=6" class="parent"><span>خبری
+                                    و اطلاع رسانی</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=11" class="parent"><span>اینترنتی</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=12" class="parent"><span>آب و
+                                    هوا</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=22" class="parent"><span>مکان
+                                    یابی</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=23" class="parent"><span>مسنجر
+                                    و چت</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=48" class="parent"><span>فیلتر
+                                    شکن</span></a> </li>
+                            </ul>
+                        </li>
+                        <li><a>ابزارک ها</a>
+                            <ul>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=2" class="parent"><span>ابزار</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=4" class="parent"><span>سخنگو</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=5" class="parent"><span>آنتی
+                                    ویروس</span></a> </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=19" class="parent"><span>سیستمی</span></a>
+                                </li>
+                                <li><a href="http://android.shaahr.com/search.aspx?cat=14" class="parent"><span>تقویم</span></a>
+                                </li>
+                            </ul>
+                            <li><a>امنیتی</a>
+                                <ul>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=10" class="parent"><span>امنیتی</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>آموزشی و تفریحی</a>
+                                <ul>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=9" class="parent"><span>آموزشی</span></a>
+                                    </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=7" class="parent"><span>انواع
+                                        کتاب</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=15" class="parent"><span>فرهنگ
+                                        لغات</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=13" class="parent"><span>آموزشی
+                                        و مهندسی</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=16" class="parent"><span>سرگرمی</span></a>
+                                    </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=17" class="parent"><span>هنری</span></a>
+                                    </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=18" class="parent"><span>ورزشی</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>تصویر ، مدیا و نوشتنی</a>
+                                <ul>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=20" class="parent"><span>عکس
+                                        ، تصویر و مدیا</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=24" class="parent"><span>نوشتاری
+                                        ، خواندنی و آفیس</span></a> </li>
+                                </ul>
+                            </li>
+                            <li><a>مذهبی</a>
+                                <ul>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=21" class="parent"><span>مذهبی</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>متفرقه</a>
+                                <ul>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=8" class="parent"><span>نرم افزارهای
+                                        فارسی</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=25" class="parent"><span>پزشکی
+                                        . بهداشتی</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=46" class="parent"><span>موسیقی</span></a>
+                                    </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=47" class="parent"><span>مالی
+                                        و حسابداری</span></a> </li>
+                                    <li><a href="http://android.shaahr.com/search.aspx?cat=26" class="parent"><span>متفرقه</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="master">
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            <uc2:footer ID="footer1" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>

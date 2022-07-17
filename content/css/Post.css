@@ -1,0 +1,8 @@
+﻿@font-face
+{
+font-family: 'koodakAnd';
+src: url(      '../../content/font/W_koodak.eot' );
+src: url(      '../../content/font/W_koodak.eot?#iefix' ) format('embedded-opentype'), url('../../content/font/W_koodak.woff' ) format('woff' ),
+    url('../../content/font/W_koodak.TTF' ) format('truetype' );
+}
+#slideshow{position:relative;height:229px;}#slideshow DIV{position:absolute;top:0;left:0;opacity:0.0;height:229px;width:615px;}#slideshow DIV.active{z-index:10;opacity:1.0;}#slideshow DIV.last-active{z-index:9;}#slideshow DIV IMG{display:block;}#mask{display:none;background:#7B7C7B;position:fixed;left:0;top:0;width:100%;height:100%;opacity:0.8;z-index:999;}.login-popup{width:350px;display:none;background:#fff;border:3px solid #DBEAF9;float:left;font-size:11px;position:fixed;top:40%;left:50%;z-index:99999;box-shadow:0 0 10px #999;-moz-box-shadow:0 0 10px #999;-webkit-box-shadow:0 0 10px #999;-moz-border-radius:5px;-webkit-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;padding:15px;}img.btn_close{float:right;margin-right:8px;margin-top:4px;}#gallery{width:682px;padding:5px;}#gallery ul{list-style:none;}#gallery ul li{display:inline;}#gallery ul img{border:5px solid #DBDBDB;border-width:5px 5px 20px;}#gallery ul a:hover img{border:5px solid #14A0C6;color:#fff;border-width:5px 5px 20px;}#gallery ul a:hover{color:#fff;}.awarApp-popup,.awarLink-popup{width:350px;display:none;background:#fff;border:3px solid #DBEAF9;float:left;font-size:11px;position:fixed;top:40%;left:50%;z-index:99999;box-shadow:0 0 10px #999;-moz-box-shadow:0 0 10px #999;-webkit-box-shadow:0 0 10px #999;-moz-border-radius:5px;-webkit-border-radius:5px 5px 5px 5px;border-radius:5px 5px 5px 5px;height:340px;padding:15px;}
